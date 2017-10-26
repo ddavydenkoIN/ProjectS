@@ -1,0 +1,18 @@
+<div class="container" data-ng-init="initMap()">
+	<div class="row">
+		<div class="col-sm-8" id="map"></div>
+		<div class="col-sm-4">
+			<div>
+				<button class="btn btn-success" data-ng-click="showAllMarkers()">Show all markers</button>
+				<button class="btn btn-success" data-ng-click="hideMarkers()">Hide markers</button>
+			</div>
+			<div>
+				<button class="btn btn-success" data-ng-click="saveMarkers()" data-ng-disabled="!markersHadBeenHidden">Save</button>
+			</div>
+			<label>Select Category: <select ng-options="category.type as category.label for category in categories" ng-model="selectedCategory"></select></label>
+			
+		</div>
+	</div>
+
+</div>
+

@@ -1,0 +1,29 @@
+<div class="container about-container">
+	<h1>ProjectS status:</h1>
+	<div data-ng-repeat="toDo in listOfTodos" class="pl-20">
+		<div class="media">
+		  <div class="media-left">
+		  	<a href="#">
+	  			<img class="media-object" data-ng-if="toDo.completed" src="../client/app/shared/img/check_green.png" alt="check icon" width="35px">
+	  			<img class="media-object" data-ng-if="!toDo.completed" src="../client/app/shared/img/fail_red.png" alt="check icon" width="35px">
+			</a>
+
+		  </div>
+		  <div class="media-body">
+		    	<h4 class="media-heading">{{toDo.jist}}</h4>
+		    	<p>{{toDo.description}}</p>
+			  	<div class="media" data-ng-if="toDo.subitems" data-ng-repeat="item in toDo.subitems">
+				  <div class="media-left">
+				  	<a href="#">
+			  			<img class="media-object" data-ng-if="item.completed" src="../client/app/shared/img/check_green.png" alt="check icon" width="25px">
+			  			<img class="media-object" data-ng-if="!item.completed" src="../client/app/shared/img/fail_red.png" alt="check icon" width="25px">
+					</a>
+				  </div>
+				  <div class="media-body">
+				    	<p>{{item.description}}</p>
+				  </div>
+				</div>
+		  </div>
+		</div>
+	</div>
+</div>
